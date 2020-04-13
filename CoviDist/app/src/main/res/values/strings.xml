@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CoviDist</string>
+    <string name="Headline">Welcome to</string>
+    <string name="PersonalBtn">Personal Menu</string>
+    <string name="FamilyBtn">Family Menu</string>
+    <string name="CurrentLocationTxt">Current Location</string>
+    <string name="UpdateDistTxt">Update Distance</string>
+    <string name="SetHomeTxt">Set Home Location</string>
+    <string name="AddMemberTxt">Add Family Member</string>
+    <string name="DeleteMemberTxt">Delete Family Member</string>
+    <string name="FindMemberTxt">Find Family Member</string>
+    <string name="title_activity_map">Map</string>
+    <string name="google_maps_key">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
+</resources>

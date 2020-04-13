@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/grey"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:text="@string/FamilyBtn"
+        android:gravity="center_horizontal"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/AddMemberTxt"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_shape"
+        android:drawableEnd="@drawable/add_member"
+        android:id="@+id/AddFamilyMember"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/DeleteMemberTxt"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_shape"
+        android:drawableEnd="@drawable/delete_member"
+        android:id="@+id/DeleteFamilyMember"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/FindMemberTxt"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_shape"
+        android:drawableEnd="@drawable/find_member"
+        android:id="@+id/FindFamilyMember"/>
+
+</LinearLayout>

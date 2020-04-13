@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoviDist</string>
+    <string name="Headline">ברוכים הבאים</string>
+    <string name="PersonalBtn">תפריט אישי</string>
+    <string name="FamilyBtn">תפריט משפחתי</string>
+    <string name="CurrentLocationTxt">מיקום נוכחי</string>
+    <string name="UpdateDistTxt">עדכון מרחק</string>
+    <string name="SetHomeTxt">הגדר את מיקום הבית</string>
+    <string name="AddMemberTxt">הוספת בן משפחה</string>
+    <string name="DeleteMemberTxt">מחק בן משפחה</string>
+    <string name="FindMemberTxt">מצא בן משפחה</string>
+    <string name="title_activity_map">מפה</string>
+    <string name="google_maps_key">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
+</resources>
