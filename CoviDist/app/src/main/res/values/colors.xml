@@ -3,7 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="grey">#313231</color>
+    <color name="grey">#646564</color>
     <color name="white">#FFFFFF</color>
     <color name="Bordux">#852E2E</color>
+    <color name="radiusFill">#89FF00</color>
+    <color name="radiusStroke">#0D6511</color>
 </resources>

@@ -7,4 +7,8 @@
         <!--<item name="android:windowBackground">@drawable/add_item_shape</item>-->
     </style>
 
+    <style name="SignInTheme" parent="AppTheme.CustomTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center|top</item>
+    </style>
 </resources>

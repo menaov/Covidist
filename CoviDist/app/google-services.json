@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "461187658852",
+    "firebase_url": "https://covidist-4241b.firebaseio.com",
+    "project_id": "covidist-4241b",
+    "storage_bucket": "covidist-4241b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461187658852:android:c58c141686dc28ad451b71",
+        "android_client_info": {
+          "package_name": "com.example.covidist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461187658852-f75cmluots3lvv5je7h5b89ug5u5v0q5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.covidist",
+            "certificate_hash": "eda1343dd61bf285dcf689876cc55d1fa97a8d8c"
+          }
+        },
+        {
+          "client_id": "461187658852-13evstk2hk5ifkn2fiiu2firvk4nk9hd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh5K1p1zwQMbSKm6PpnOJiuY2W6wjVOjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461187658852-13evstk2hk5ifkn2fiiu2firvk4nk9hd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,4 +12,18 @@
     <string name="FindMemberTxt">מצא בן משפחה</string>
     <string name="title_activity_map">מפה</string>
     <string name="google_maps_key">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
+    <string name="updateDistanceHint">הכנס מרחק מותר</string>
+    <string name="updateDistanceHeadline">עדכן מרחק</string>
+    <string name="updateBtn">עדכן</string>
+    <string name="setHomeLocationHeadline">הגדרת כתובת הבית</string>
+    <string name="enterAddressHint">הכנס את כתובת ביתך</string>
+    <string name="chooseBtnText">בחר מיקום מתוך המפה</string>
+    <string name="giveLocationToast">יש לאשר גישה למיקום.</string>
+    <string name="Cancel">ביטול</string>
+    <string name="open_location_settings">הגדרות מיקום</string>
+    <string name="Ok">אישור</string>
+    <string name="PermissionGranted">הרשאה אושרה</string>
+    <string name="PermissionDenied">הרשאה נדחתה</string>
+    <string name="allowPermissions">יש לאשר הרשאות גישה.</string>
+    <string name="SignOutBtn">התנתק</string>
 </resources>

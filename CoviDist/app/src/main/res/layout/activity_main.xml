@@ -4,8 +4,21 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/grey"
+    android:background="@drawable/app_background"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SignOutBtn"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_margin="10dp"
+        android:enabled="false"
+        android:background="@drawable/btn_shape"
+        android:layout_gravity="start|top"
+        android:drawableEnd="@drawable/exit_icon"
+        android:id="@+id/signOutBtn"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +62,5 @@
         android:layout_height="250dp"
         android:src="@drawable/coronabackground"
         android:layout_marginTop="30dp"
-        android:scaleType="centerCrop"
-        />
+        android:scaleType="centerCrop"/>
 </LinearLayout>

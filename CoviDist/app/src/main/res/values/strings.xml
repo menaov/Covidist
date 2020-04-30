@@ -11,4 +11,21 @@
     <string name="FindMemberTxt">Find Family Member</string>
     <string name="title_activity_map">Map</string>
     <string name="google_maps_key">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
+    <string name="updateDistanceHint">Enter allowed distance</string>
+    <string name="updateDistanceHeadline">Update Distance</string>
+    <string name="updateBtn">Update</string>
+    <string name="setHomeLocationHeadline">Set Home Location</string>
+    <string name="enterAddressHint">Enter your home address</string>
+    <string name="chooseBtnText">Choose location from map</string>
+    <string name="giveLocationToast">Please enable your location.</string>
+    <string name="Cancel">Cancel</string>
+    <string name="open_location_settings">Open location settings</string>
+    <string name="Ok">Ok</string>
+    <string name="PermissionGranted">Permission Granted</string>
+    <string name="PermissionDenied">Permission Denied</string>
+    <string name="allowPermissions">You need to allow access permissions</string>
+    <string name="SignOutBtn">Sign Out</string>
+    <string name="FacebookApplicationID" translatable="false">533469320941314</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb533469320941314</string>
+    <string name="facebook_application_id" translatable="false">533469320941314</string>
 </resources>

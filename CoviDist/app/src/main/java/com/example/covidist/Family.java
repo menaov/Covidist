@@ -35,15 +35,12 @@ public class Family extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.AddFamilyMember:
                 addFamily();
-                Toast.makeText(this, "add", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.DeleteFamilyMember:
                 deleteFamily();
-                Toast.makeText(this, "delete", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.FindFamilyMember:
                 findFamily();
-                Toast.makeText(this, "find", Toast.LENGTH_SHORT).show();
                 break;
 
         }

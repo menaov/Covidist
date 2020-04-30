@@ -12,39 +12,28 @@
         android:textStyle="bold"
         android:textSize="50sp"
         android:textColor="@color/white"
-        android:text="@string/PersonalBtn"
+        android:text="@string/updateDistanceHeadline"
         android:gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:hint="@string/updateDistanceHint"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_shape"
+        android:id="@+id/rangeInput"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/SetHomeTxt"
+        android:text="@string/updateBtn"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/set_home"
-        android:id="@+id/setHomeBtn"/>
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/UpdateDistTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/update_distance"
-        android:id="@+id/updateDistanceBtn"/>
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/CurrentLocationTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:id="@+id/currentLocation"
-        android:drawableEnd="@drawable/current_location"/>
+        android:id="@+id/updateBtn"/>
 </LinearLayout>

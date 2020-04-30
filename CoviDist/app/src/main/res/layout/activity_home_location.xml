@@ -10,41 +10,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textColor="@color/white"
-        android:text="@string/PersonalBtn"
+        android:text="@string/setHomeLocationHeadline"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         android:gravity="center_horizontal"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:hint="@string/enterAddressHint"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_shape"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/SetHomeTxt"
+        android:text="@string/chooseBtnText"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/set_home"
-        android:id="@+id/setHomeBtn"/>
+        android:id="@+id/chooseBtn"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/UpdateDistTxt"
+        android:text="@string/updateBtn"
         android:textAllCaps="false"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/update_distance"
-        android:id="@+id/updateDistanceBtn"/>
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/CurrentLocationTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:id="@+id/currentLocation"
-        android:drawableEnd="@drawable/current_location"/>
+        android:id="@+id/updateBtn"/>
 </LinearLayout>

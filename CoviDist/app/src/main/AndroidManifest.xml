@@ -8,6 +8,8 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,8 +17,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.CustomTheme">
-        <activity android:name=".FindMember"></activity>
+        android:theme="@style/SignInTheme">
+        <activity android:name=".UpdateDistance" />
+        <activity android:name=".HomeLocation" />
+        <activity android:name=".FindMember" />
         <activity
             android:name=".DeleteMember"
             android:label="Delete"
