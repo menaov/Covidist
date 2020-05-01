@@ -3,7 +3,7 @@
 
 ### This is an Android application for staying safe during quarantine and check your location while you are out.
 
-####This project includes:
+##### This project includes:
 * Integration with Google Maps API.
 * Using Google Maps API to draw on map.
 * Firebase authentication.
