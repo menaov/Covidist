@@ -9,3 +9,4 @@
 * Firebase authentication.
 * Firebase Realtime-Database.
 * Facebook and Email Sign In.
+* Using device common intents and permissions.
