@@ -10,12 +10,11 @@
     <string name="DeleteMemberTxt">Delete Family Member</string>
     <string name="FindMemberTxt">Find Family Member</string>
     <string name="title_activity_map">Map</string>
-    <string name="google_maps_key">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
     <string name="updateDistanceHint">Enter allowed distance</string>
     <string name="updateDistanceHeadline">Update Distance</string>
     <string name="updateBtn">Update</string>
     <string name="setHomeLocationHeadline">Set Home Location</string>
-    <string name="enterAddressHint">Enter your home address</string>
+    <string name="chooseAddressHint">Please choose location from map.</string>
     <string name="chooseBtnText">Choose location from map</string>
     <string name="giveLocationToast">Please enable your location.</string>
     <string name="Cancel">Cancel</string>
@@ -28,4 +27,12 @@
     <string name="FacebookApplicationID" translatable="false">533469320941314</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb533469320941314</string>
     <string name="facebook_application_id" translatable="false">533469320941314</string>
+    <string name="title_activity_choose_location_map" translatable="false">Map</string>
+    <string name="chooseLocationMsg">Do you want to choose this location?</string>
+    <string name="chooseSnackBtn">Choose</string>
+    <string name="CHANNEL_ID" translatable="false">First Channel</string>
+    <string name="notificationTitle">Location Deviation Alert!</string>
+    <string name="notificationText">You are to far away! Please get closer to home!!!</string>
+    <string name="channel_name">Location Deviation</string>
+    <string name="channel_description">Location deviation alerts</string>
 </resources>

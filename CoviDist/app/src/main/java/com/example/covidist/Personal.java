@@ -2,9 +2,14 @@ package com.example.covidist;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,12 +23,9 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -38,12 +40,14 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
     private FirebaseAssistant mFirebaseAssistant;
     private List<DataManager> mDataManagerUsers;
     private DataManager currentUserData;
+    private NotificationManagerCompat mNotificationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
 
+        mNotificationManager = NotificationManagerCompat.from(this);
         currentLocation = findViewById(R.id.currentLocation);
         currentLocation.setOnClickListener(this);
         setHomeBtn = findViewById(R.id.setHomeBtn);
@@ -89,8 +93,14 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
     }
 
     private void setHomeClick() {
-        Intent intent = new Intent(Personal.this, HomeLocation.class);
-        startActivity(intent);
+        if(checkIfLocationEnabled()) {
+            Intent intent = new Intent(Personal.this, HomeLocation.class);
+            intent.putExtra("Location", mLocation);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(Personal.this, R.string.giveLocationToast, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void currentLocationClick() {
@@ -125,9 +135,40 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
 
     @Override
     public void onLocationChanged(Location location) {
-        mLocation = location;
+        if((location != null)&&(mLocation != null)) {
+            if (mLocation.distanceTo(location) >= 0.5) {
+                mLocation = location;
+            }
+            Location homeLocation = new Location(LocationManager.GPS_PROVIDER);
+            LatLng homeLatLng = getHomeFromFirebase();
+            homeLocation.setLongitude(homeLatLng.longitude);
+            homeLocation.setLatitude(homeLatLng.latitude);
+            int range = getRangeFromFirebase();
+            if (mLocation.distanceTo(homeLocation) > range) {
+                createNotificationChannel();
+                Notification notification = new NotificationCompat.Builder(this, getResources().getString(R.string.CHANNEL_ID))
+                        .setSmallIcon(R.drawable.covidist)
+                        .setContentTitle(getResources().getString(R.string.notificationTitle))
+                        .setContentText(getResources().getString(R.string.notificationText))
+                        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                        .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                        .build();
+                mNotificationManager.notify(1, notification);
+            }
+        }
     }
 
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = getString(R.string.channel_name);
+            String description = getString(R.string.channel_description);
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel(getResources().getString(R.string.CHANNEL_ID), name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 
     @Override
     public void onProviderDisabled(String provider) {

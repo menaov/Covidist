@@ -9,6 +9,8 @@
 
     <style name="SignInTheme" parent="AppTheme.CustomTheme">
         <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
         <item name="android:layout_gravity">center|top</item>
+        <item name="android:windowBackground">@drawable/world_map_carbon_headline</item>
     </style>
 </resources>

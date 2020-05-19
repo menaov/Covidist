@@ -1,19 +1,12 @@
 package com.example.covidist;
 
 import androidx.fragment.app.FragmentActivity;
-
-import android.content.res.Resources;
 import android.location.Location;
-import android.os.Binder;
 import android.os.Bundle;
-import android.os.IBinder;
-
-import com.google.android.gms.dynamic.IObjectWrapper;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -69,8 +62,8 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         markerHome.showInfoWindow();
         markerHome.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.home_icon));
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(mHome));
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mHome, 16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(locationSet));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(locationSet, 16));
 
         mMap.addCircle(new CircleOptions().center(mHome)
                 .radius(mRange)

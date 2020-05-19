@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/app_background"
+    android:background="@drawable/world_map_carbon"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:layout_width="match_parent"
@@ -16,18 +16,19 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:gravity="center_horizontal"/>
-    <EditText
+
+    <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20sp"
         android:padding="10dp"
-        android:textColor="@color/white"
-        android:hint="@string/enterAddressHint"
+        android:textColor="@color/grey"
+        android:hint="@string/chooseAddressHint"
         android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:inputType="numberDecimal"
-        android:background="@drawable/edit_shape"/>
+        android:background="@drawable/edit_shape"
+        android:id="@+id/addressText"/>
     <Button
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -47,5 +48,6 @@
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@drawable/btn_shape"
+        android:enabled="false"
         android:id="@+id/updateBtn"/>
 </LinearLayout>

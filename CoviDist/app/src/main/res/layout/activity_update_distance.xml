@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/app_background"
+    android:background="@drawable/world_map_carbon"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20sp"
+        android:textColor="@color/grey"
         android:padding="10dp"
         android:hint="@string/updateDistanceHint"
         android:gravity="center_horizontal"

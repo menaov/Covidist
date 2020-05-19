@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.covidist">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -18,13 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SignInTheme">
-        <activity android:name=".UpdateDistance" />
-        <activity android:name=".HomeLocation" />
-        <activity android:name=".FindMember" />
-        <activity
-            android:name=".DeleteMember"
-            android:label="Delete"
-            android:screenOrientation="locked" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,6 +32,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".ChooseLocationMap"
+            android:label="@string/title_activity_choose_location_map" />
+        <activity android:name=".UpdateDistance" />
+        <activity android:name=".HomeLocation" />
+        <activity android:name=".FindMember" />
+        <activity
+            android:name=".DeleteMember"
+            android:label="Delete"
+            android:screenOrientation="locked" />
         <activity
             android:name=".AddMember"
             android:label="Add"

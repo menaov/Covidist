@@ -97,12 +97,6 @@ public class FirebaseAssistant implements ValueEventListener {
                 });
                 break;
         }
-        mReferenceUsers.child(mCurrentUserKey).child(iFieldName).setValue(500).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                iDataStatus.DataIsUpdated();
-            }
-        });
     }
 
     public List<DataManager> getmUsers() {

@@ -21,4 +21,26 @@
     string in this file.
     -->
     <string name="GISKey" templateMergeStrategy="preserve" translatable="false">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=4C:85:81:2C:7A:72:98:30:68:39:C2:BB:61:3E:B8:64:21:3B:88:53%3Bcom.example.covidist
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.example.covidist
+
+    SHA-1 certificate fingerprint:
+    4C:85:81:2C:7A:72:98:30:68:39:C2:BB:61:3E:B8:64:21:3B:88:53
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" translatable="false">AIzaSyBowf-R9wcUrqoNBPH0JjZ3WXZrgmXa-tE</string>
 </resources>

@@ -2,29 +2,37 @@ package com.example.covidist;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import java.util.Arrays;
+import android.widget.TextView;
+import android.widget.Toast;
 import java.util.List;
-import com.google.android.gms.common.api.Status;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.widget.Autocomplete;
-import com.google.android.libraries.places.widget.AutocompleteActivity;
-import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
+import com.google.android.gms.maps.model.LatLng;
 
 public class HomeLocation extends AppCompatActivity implements View.OnClickListener {
 
     private Button chooseBtn;
-
+    private Button updateBtn;
+    private FirebaseAssistant mFirebaseAssistant;
+    private LatLng mChosenLocation;
+    private TextView addressText;
     private final static int AUTOCOMPLETE_REQUEST_CODE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_location);
 
+        mFirebaseAssistant = FirebaseAssistant.getInstance();
         chooseBtn = findViewById(R.id.chooseBtn);
         chooseBtn.setOnClickListener(this);
+        updateBtn = findViewById(R.id.updateBtn);
+        updateBtn.setOnClickListener(this);
+        addressText = findViewById(R.id.addressText);
     }
 
     @Override
@@ -33,14 +41,40 @@ public class HomeLocation extends AppCompatActivity implements View.OnClickListe
             case R.id.chooseBtn:
                 chooseClick();
                 break;
+            case R.id.updateBtn:
+                updateClick();
+                break;
         }
     }
 
+    private void updateClick() {
+        mFirebaseAssistant.updateUser("mHomeLocation", mChosenLocation, new FirebaseAssistant.DataStatus() {
+            @Override
+            public void DataIsLoaded(List<DataManager> iDataManagerList, List<String> iKeys) {
+
+            }
+
+            @Override
+            public void DataIsInserted() {
+
+            }
+
+            @Override
+            public void DataIsUpdated() {
+                Toast.makeText(HomeLocation.this, "Data updated successfully", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void DataIsDeleted() {
+
+            }
+        });
+    }
+
     private void chooseClick() {
-        List<Place.Field> fields = Arrays.asList(Place.Field.NAME);
-        Intent intent = new Autocomplete.IntentBuilder(
-                AutocompleteActivityMode.FULLSCREEN, fields)
-                .build(this);
+        Intent intent = new Intent(HomeLocation.this, ChooseLocationMap.class);
+        intent.putExtra("Location", (Location) getIntent().getExtras().get("Location"));
         startActivityForResult(intent, AUTOCOMPLETE_REQUEST_CODE);
     }
 
@@ -49,13 +83,58 @@ public class HomeLocation extends AppCompatActivity implements View.OnClickListe
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == AUTOCOMPLETE_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                Place place = Autocomplete.getPlaceFromIntent(data);
-            } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
+                mChosenLocation = (LatLng) data.getExtras().get("ChosenLocation");
+                Address address = getAddressFromLatLng(mChosenLocation);
+                addressText.setText(address.getAddressLine(0));
+                updateBtn.setEnabled(true);
+            } /*else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
                 // TODO: Handle the error.
                 Status status = Autocomplete.getStatusFromIntent(data);
             } else if (resultCode == RESULT_CANCELED) {
                 // The user canceled the operation.
+            }*/
+        }
+    }
+
+    private LatLng getLatLngFromAddress(String address){
+
+        Geocoder geocoder=new Geocoder(HomeLocation.this);
+        List<Address> addressList;
+
+        try {
+            addressList = geocoder.getFromLocationName(address, 1);
+            if(addressList!=null){
+                Address singleAddress = addressList.get(0);
+                LatLng latLng=new LatLng(singleAddress.getLatitude(),singleAddress.getLongitude());
+                return latLng;
             }
+            else{
+                return null;
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    private Address getAddressFromLatLng(LatLng latLng){
+        Geocoder geocoder=new Geocoder(HomeLocation.this);
+        List<Address> addresses;
+        try {
+            addresses = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 5);
+            if(addresses!=null){
+                Address address=addresses.get(0);
+                return address;
+            }
+            else{
+                return null;
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
         }
     }
 }
