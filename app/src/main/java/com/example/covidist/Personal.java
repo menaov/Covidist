@@ -135,7 +135,10 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
 
     @Override
     public void onLocationChanged(Location location) {
-        if((location != null)&&(mLocation != null)) {
+        if(mLocation == null){
+            mLocation = location;
+        }
+        if(location != null) {
             if (mLocation.distanceTo(location) >= 0.5) {
                 mLocation = location;
             }
