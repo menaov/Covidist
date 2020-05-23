@@ -19,10 +19,7 @@ public class UpdateDistance extends AppCompatActivity implements View.OnClickLis
 
     private EditText rangeInput;
     private Button updateBtn;
-    //private FirebaseUser mFirebaseUser;
     private FirebaseAssistant mFirebaseAssistant;
-    //private List<DataManager> mDataManagerUsers;
-    //private DataManager currentUserData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +31,6 @@ public class UpdateDistance extends AppCompatActivity implements View.OnClickLis
         updateBtn.setOnClickListener(this);
         mFirebaseAssistant = FirebaseAssistant.getInstance();
     }
-
-    /*private void initializeData() {
-        mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        mDataManagerUsers = mFirebaseAssistant.getmUsers();
-        currentUserData = null;
-
-        for(DataManager u : mDataManagerUsers){
-            if(u.getmEmail() == mFirebaseUser.getEmail()){
-                currentUserData = u;
-                break;
-            }
-        }
-    }*/
 
     @Override
     public void onClick(View v) {

@@ -14,8 +14,8 @@
     <string name="updateDistanceHeadline">Update Distance</string>
     <string name="updateBtn">Update</string>
     <string name="setHomeLocationHeadline">Set Home Location</string>
-    <string name="chooseAddressHint">Please choose location from map.</string>
-    <string name="chooseBtnText">Choose location from map</string>
+    <string name="chooseAddressHint">Choose location from map.</string>
+    <string name="chooseBtnText">Open map</string>
     <string name="giveLocationToast">Please enable your location.</string>
     <string name="Cancel">Cancel</string>
     <string name="open_location_settings">Open location settings</string>
@@ -32,7 +32,9 @@
     <string name="chooseSnackBtn">Choose</string>
     <string name="CHANNEL_ID" translatable="false">First Channel</string>
     <string name="notificationTitle">Location Deviation Alert!</string>
-    <string name="notificationText">You are to far away! Please get closer to home!!!</string>
+    <string name="notificationText">You are too far away! Please get closer to home!!!</string>
     <string name="channel_name">Location Deviation</string>
     <string name="channel_description">Location deviation alerts</string>
+    <string name="app_name_entry" translatable="false">----CoviDist----</string>
+    <string name="entry_logo_text">stay home, stay safe</string>
 </resources>

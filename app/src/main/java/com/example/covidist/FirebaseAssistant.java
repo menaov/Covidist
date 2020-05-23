@@ -13,7 +13,6 @@ import java.util.List;
 
 public class FirebaseAssistant implements ValueEventListener {
 
-    private static final String TAG = "FirebaseAssistant Zevel";
     private FirebaseDatabase mDatabase;
     private DatabaseReference mReferenceUsers;
     private List<DataManager> mUsers = new ArrayList<>();
@@ -31,7 +30,6 @@ public class FirebaseAssistant implements ValueEventListener {
 
     @Override
     public void onCancelled(@NonNull DatabaseError databaseError) {
-        Log.w(TAG, "Oy Basa Ze lo avad!", databaseError.toException());
     }
 
     public interface DataStatus{
@@ -67,15 +65,6 @@ public class FirebaseAssistant implements ValueEventListener {
             }
         });
     }
-
-    /*public void updateUser(String iKey, DataManager iUser, final DataStatus iDataStatus){
-        mReferenceUsers.child(iKey).setValue(iUser).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                iDataStatus.DataIsUpdated();
-            }
-        });
-    }*/
 
     public void updateUser(String iFieldName, Object iValue, final DataStatus iDataStatus){
         switch(iFieldName){

@@ -1,7 +1,5 @@
 package com.example.covidist;
 
-import android.location.Location;
-
 public class DataManager {
 
     private int mID;

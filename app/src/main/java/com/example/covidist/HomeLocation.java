@@ -87,12 +87,7 @@ public class HomeLocation extends AppCompatActivity implements View.OnClickListe
                 Address address = getAddressFromLatLng(mChosenLocation);
                 addressText.setText(address.getAddressLine(0));
                 updateBtn.setEnabled(true);
-            } /*else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
-                // TODO: Handle the error.
-                Status status = Autocomplete.getStatusFromIntent(data);
-            } else if (resultCode == RESULT_CANCELED) {
-                // The user canceled the operation.
-            }*/
+            }
         }
     }
 

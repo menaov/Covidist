@@ -21,7 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,9 +31,9 @@ import java.util.List;
 
 public class Personal extends AppCompatActivity implements View.OnClickListener, LocationListener {
     private static final int PERMISSION_REQUEST_CODE = 99;
-    private Button currentLocation;
-    private Button setHomeBtn;
-    private Button updateDistanceBtn;
+    private LinearLayout currentLocation;
+    private LinearLayout setHomeBtn;
+    private LinearLayout updateDistanceBtn;
     private Location mLocation;
     private LocationManager mLocationManager;
     private FirebaseUser mFirebaseUser;
@@ -48,7 +48,7 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
         setContentView(R.layout.activity_personal);
 
         mNotificationManager = NotificationManagerCompat.from(this);
-        currentLocation = findViewById(R.id.currentLocation);
+        currentLocation = findViewById(R.id.current_location);
         currentLocation.setOnClickListener(this);
         setHomeBtn = findViewById(R.id.setHomeBtn);
         setHomeBtn.setOnClickListener(this);
@@ -75,7 +75,7 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.currentLocation:
+            case R.id.current_location:
                 currentLocationClick();
                 break;
             case R.id.setHomeBtn:
@@ -139,7 +139,7 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
             mLocation = location;
         }
         if(location != null) {
-            if (mLocation.distanceTo(location) >= 0.5) {
+            if (mLocation.distanceTo(location) >= 1) {
                 mLocation = location;
             }
             Location homeLocation = new Location(LocationManager.GPS_PROVIDER);
@@ -150,7 +150,7 @@ public class Personal extends AppCompatActivity implements View.OnClickListener,
             if (mLocation.distanceTo(homeLocation) > range) {
                 createNotificationChannel();
                 Notification notification = new NotificationCompat.Builder(this, getResources().getString(R.string.CHANNEL_ID))
-                        .setSmallIcon(R.drawable.covidist)
+                        .setSmallIcon(R.drawable.small_covidist)
                         .setContentTitle(getResources().getString(R.string.notificationTitle))
                         .setContentText(getResources().getString(R.string.notificationText))
                         .setPriority(NotificationCompat.PRIORITY_DEFAULT)

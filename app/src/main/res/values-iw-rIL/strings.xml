@@ -31,4 +31,5 @@
     <string name="notificationText">אותרה חריגת מרחק! נא להתקרב לבית!!!</string>
     <string name="channel_name">חריגת מרחק</string>
     <string name="channel_description">התראות על חריגת מרחק</string>
+    <string name="entry_logo_text">השאר בבית, השאר בטוח</string>
 </resources>

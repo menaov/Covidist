@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.covidist">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -19,7 +18,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SignInTheme">
+        <activity android:name=".Entry_Activity"
+            android:screenOrientation="locked">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,31 +43,9 @@
             android:label="@string/title_activity_choose_location_map" />
         <activity android:name=".UpdateDistance" />
         <activity android:name=".HomeLocation" />
-        <activity android:name=".FindMember" />
-        <activity
-            android:name=".DeleteMember"
-            android:label="Delete"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".AddMember"
-            android:label="Add"
-            android:screenOrientation="locked" />
         <activity
             android:name=".Map"
             android:label="@string/title_activity_map" />
-        <activity
-            android:name=".Family"
-            android:label="Family"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="locked">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".Personal"
             android:label="Personal"

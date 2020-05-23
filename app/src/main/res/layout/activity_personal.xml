@@ -6,45 +6,131 @@
     android:gravity="center"
     android:background="@drawable/world_map_carbon"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/entry_logo"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="50sp"
-        android:textColor="@color/white"
-        android:text="@string/PersonalBtn"
-        android:gravity="center_horizontal"/>
-    <Button
-        android:layout_width="300dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_line"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_marginEnd="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_line"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/SetHomeTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/set_home"
-        android:id="@+id/setHomeBtn"/>
-    <Button
-        android:layout_width="300dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:id="@+id/setHomeBtn">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/home_red_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:shadowColor="#FDFFFFFF"
+            android:layout_marginTop="10dp"
+            android:shadowRadius="8"
+            android:text="@string/setHomeLocationHeadline"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/UpdateDistTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:drawableEnd="@drawable/update_distance"
-        android:id="@+id/updateDistanceBtn"/>
-    <Button
-        android:layout_width="300dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:id="@+id/updateDistanceBtn">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/disticon2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:shadowColor="#FDFFFFFF"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:shadowRadius="8"
+            android:text="@string/updateDistanceHeadline"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/CurrentLocationTxt"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@drawable/btn_shape"
-        android:id="@+id/currentLocation"
-        android:drawableEnd="@drawable/current_location"/>
+        android:layout_marginTop="40dp"
+        android:background="#D2403F3F"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:id="@+id/current_location">
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/location_curr_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:shadowColor="#FDFFFFFF"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:shadowRadius="8"
+            android:text="@string/CurrentLocationTxt"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+
+
 </LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/world_map_carbon"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Entry_Activity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/entry_logo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_line"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="30sp"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_line"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entry_logo_text"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="android:attr/ProgressBarStyle"
+        android:indeterminateDrawable="@drawable/progressbar_entry"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"/>
+
+
+</LinearLayout>
