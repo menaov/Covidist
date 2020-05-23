@@ -12,7 +12,8 @@
 * Using device common intents and permissions.
 
 ##### Screenshots:
-![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/covi1.jpg "Covidist")
-![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/covi2.jpg "Covidist")
-![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/covi3.jpg "Covidist")
-![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/covi4.jpg "Covidist")
+![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/1.jpg "Covidist")
+![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/2.jpg "Covidist")
+![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/3.jpg "Covidist")
+![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/4.jpg "Covidist")
+![alt text](https://github.com/menaov/Covidist/blob/master/Screenshots/5.jpg "Covidist")
